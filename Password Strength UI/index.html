@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength UI</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="background" id="background"></div>
+    <div class="bg-white rounded p-10 text-center shadow-md">
+        <h1 class="text-lg font-bold text-purple-700">Sing Up</h1>
+        <p class="text-sm text-gray-700"> Looks like you don't have an account. Let's create a new account for
+            <span class="font-bold text-purple-500">github.com/Takozege</span>
+        </p>
+        <div class="my-4 text-left">
+            <label for="email"  class="text-gray-900">Email:</label>
+            <input type="text" class="border block w-full p-2 mt-2 rounded" id="email" 
+            required
+            placeholder="Please Enter Email">
+
+        </div>
+        <div class="my-4 text-left">
+            <label for="Password" id="PasswordLabel" class="text-gray-900">Password:</label>
+            <input type="text" class="border block w-full p-2 mt-2 rounded" id="Password" 
+            required
+            placeholder="Please Enter Password">
+
+        </div>
+        <button class="bg-purple-800 text-white py-2 mt-2 inline-block w-full rounded">
+            Continue
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
