@@ -1,8 +1,9 @@
 /*=============== SHOW HIDDEN - PASSWORD ===============*/
+const background = document.getElementById('background')
+const passwordInput = document.getElementById('login-pass')
 const showHiddenPass = (loginPass, loginEye) =>{
    const input = document.getElementById(loginPass),
          iconEye = document.getElementById(loginEye)
-
    iconEye.addEventListener('click', () =>{
       // Change password to text
       if(input.type === 'password'){
@@ -21,6 +22,12 @@ const showHiddenPass = (loginPass, loginEye) =>{
          iconEye.classList.add('ri-eye-off-line')
       }
    })
+   passwordInput.addEventListener('input', (e) => {
+      const length = e.target.value.length
+  
+      const bgBlur = 20 - length*2
+      background.style.filter = `blur(${bgBlur}px)`
+   })  
 }
 
 showHiddenPass('login-pass','login-eye')
